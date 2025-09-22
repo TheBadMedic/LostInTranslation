@@ -44,12 +44,12 @@ public class JSONTranslator implements Translator {
 
             JSONArray jsonArray = new JSONArray(jsonString);
 
+            List<String> languages = new ArrayList<>();
+
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject countryData = jsonArray.getJSONObject(i);
                 String countryCode = countryData.getString("alpha3");
-
-                List<String> languages = new ArrayList<>();
 
                 countryCodes.add(countryCode);
 
